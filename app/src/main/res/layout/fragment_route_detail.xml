@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorInfoBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/crl_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/progressBarSize"
+                android:layout_marginTop="@dimen/marginMain"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginMain"
+                android:layout_marginTop="@dimen/marginMain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_left_arrow" />
+
+            <TextView
+                android:id="@+id/tv_indications"
+                android:layout_width="@dimen/widthConstrained"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginMain"
+                android:layout_marginTop="@dimen/marginMain"
+                android:layout_marginEnd="@dimen/marginMain"
+                android:text="@string/txt_declare_expenses_product_dispatch"
+                android:textSize="@dimen/textSizeMain2"
+                android:lineHeight="21sp"
+                android:textColor="#3b3b3b"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_back" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_route_detail"
+                android:layout_width="@dimen/widthConstrained"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/marginMain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_indications"/>
+
+            <Button
+                android:id="@+id/btn_send_for_revision"
+                android:layout_width="@dimen/widthConstrained"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginMain"
+                style="@style/AppTheme.Button"
+                android:background="@drawable/general_selector"
+                android:text="@string/lbl_send_for_revision"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_route_detail"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/crl_send_declaration_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        layout="@layout/fragment_send_declaration_success" />
+
+</FrameLayout>

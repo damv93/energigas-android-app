@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:id="@+id/img_product_dispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_dispatch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_dispatch_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginStart="11dp"
+            tools:text="Lima"
+            android:textSize="18sp"
+            android:textColor="#363636"
+            app:layout_constraintStart_toEndOf="@+id/img_product_dispatch"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_product_dispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="@string/lbl_product_dispatch"
+            android:textSize="@dimen/textSizeSmall3"
+            android:textColor="#7b7b7b"
+            app:layout_constraintStart_toStartOf="@+id/tv_dispatch_place"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dispatch_place"/>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="0.1dp"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:background="#dbdbdb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_dispatch"/>
+
+        <TextView
+            android:id="@+id/tv_departure_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lbl_departure"
+            android:textSize="@dimen/textSizeSmall3"
+            android:textColor="#4c4c4c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/tv_departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/textSizeSmall3"
+            android:textColor="#7b7b7b"
+            tools:text="9 de septiembre de 2018 8:30 am"
+            app:layout_constraintStart_toEndOf="@+id/tv_departure_label"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <ImageView
+            android:id="@+id/img_departure"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/heightConstrained"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_right_arrow2"
+            android:tint="#919191"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="0.1dp"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:background="#dbdbdb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_departure_label"/>
+
+        <TextView
+            android:id="@+id/tv_arrival_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lbl_arrival"
+            android:textSize="@dimen/textSizeSmall3"
+            android:textColor="#4c4c4c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <TextView
+            android:id="@+id/tv_arrival"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/textSizeSmall3"
+            android:textColor="#7b7b7b"
+            tools:text="9 de septiembre de 2018 9:10 am"
+            app:layout_constraintStart_toStartOf="@+id/tv_departure"
+            app:layout_constraintEnd_toStartOf="@+id/img_arrival"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <ImageView
+            android:id="@+id/img_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/heightConstrained"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_right_arrow2"
+            android:tint="#919191"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintBottom_toTopOf="@+id/tv_client"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_client"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_arrival_label" />
+
+        <EditText
+            android:id="@+id/edt_client_name"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            style="@style/AppTheme.EditText2"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#3c3c3c"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_client" />
+
+        <TextView
+            android:id="@+id/tv_amount_requested"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_requested_amount"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_client_name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_amount_requested"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount_requested">
+
+            <EditText
+                android:id="@+id/edt_amount_requested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:maxLines="1"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:inputType="number"
+                android:maxLength="8" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_fuel_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="Precio combustible"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_amount_requested" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_fuel_price"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fuel_price">
+
+            <EditText
+                android:id="@+id/edt_fuel_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:maxLines="1"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:inputType="numberDecimal"
+                android:maxLength="8" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_tank_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_tank_percentage"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_fuel_price" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_tank_percentage"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tank_percentage">
+
+            <EditText
+                android:id="@+id/edt_tank_percentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="3" />
+            
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_dispatched_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_dispatched_amount"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_tank_percentage" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_dispatched_amount"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dispatched_amount">
+
+            <EditText
+                android:id="@+id/edt_dispatched_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:inputType="numberDecimal"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:maxLength="8" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_hit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_hit"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_dispatched_amount" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_hit"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hit">
+        
+            <EditText
+                android:id="@+id/edt_hit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:inputType="text"
+                android:digits="@string/alpha_numeric_allowed_chars"
+                android:singleLine="true"
+                android:maxLength="20"/>
+            
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_guide_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_guide_number"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_hit" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_guide_number"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_guide_number">
+        
+            <EditText
+                android:id="@+id/edt_guide_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:inputType="text"
+                android:digits="@string/alpha_numeric_allowed_chars"
+                android:singleLine="true"
+                android:maxLength="20" />
+        
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_invoice_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_invoice_number"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_guide_number" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_invoice_number"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_invoice_number">
+
+            <EditText
+                android:id="@+id/edt_invoice_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:inputType="text"
+                android:digits="@string/alpha_numeric_allowed_chars"
+                android:singleLine="true"
+                android:maxLength="20" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/lbl_amount"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/ic_money"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_invoice_number" />
+
+        <TextView
+            android:id="@+id/tv_currency_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#6e6e6e"
+            android:text="S/"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_amount_value" />
+
+        <TextView
+            android:id="@+id/tv_amount_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="9dp"
+            android:textSize="@dimen/textSizeLarge"
+            android:textColor="#3c3c3c"
+            tools:text="10.00"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_currency_symbol"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount" />
+
+        <TextView
+            android:id="@+id/tv_received_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_received_by"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount_value" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_received_by"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_received_by" >
+        
+            <EditText
+                android:id="@+id/edt_received_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:inputType="text"
+                android:digits="@string/name_allowed_chars"
+                android:singleLine="true"
+                android:maxLength="50" />
+        
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_observation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_observation"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_received_by" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_observation"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_observation" >
+
+            <EditText
+                android:id="@+id/edt_observation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:inputType="text"
+                android:digits="@string/alpha_numeric_allowed_chars"
+                android:singleLine="true"
+                android:maxLength="100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_attach_photo"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="91dp"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            android:textSize="@dimen/textSizeSmall2"
+            android:textColor="#515151"
+            android:text="@string/txt_attach_voucher_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_observation" />
+
+        <ImageView
+            android:id="@+id/img_attach_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_observation" />
+
+        <Button
+            android:id="@+id/btn_save_product_dispatch"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="12dp"
+            style="@style/AppTheme.Button"
+            android:background="@drawable/general_selector"
+            android:text="@string/lbl_add_product_dispatch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_attach_photo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.fragment.ProductDispatchFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <LinearLayout
+        android:id="@+id/ll_add_product_dispatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/marginMain"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_indications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#5f5f5f"
+            android:lineHeight="20sp"
+            android:text="@string/txt_product_dispatch_indications"/>
+
+        <Button
+            android:id="@+id/btn_add_dispatch"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_add_btn"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ll_product_dispatch_completed"
+        layout="@layout/view_product_dispatch_completed"
+        android:visibility="gone"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_product_dispatch_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/marginMain"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp">
+
+        <Button
+            android:id="@+id/btn_close_dispatch_form"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="-7dp"
+            android:layout_marginEnd="-7dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_close_btn" />
+
+        <include
+            android:id="@+id/sv_product_dispatch_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/form_product_dispatch" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

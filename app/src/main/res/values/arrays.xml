@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="expense_types">
+        <item>Peaje</item>
+        <item>Alimentación</item>
+        <item>Hotel</item>
+        <item>Cochera</item>
+        <item>Lavado</item>
+    </string-array>
+
+</resources>

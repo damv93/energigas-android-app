@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/crl_my_route"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#283645">
+
+        <TextView
+            android:id="@+id/tv_my_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/margingTopMainTitle"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:text="@string/lbl_my_route"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSizeLarge2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/v_route_info"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="@dimen/heightConstrained"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/my_route_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_my_route"
+            app:layout_constraintBottom_toTopOf="@+id/btn_start_route"/>
+
+        <ImageView
+            android:id="@+id/img_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/marginMain"
+            app:layout_constraintStart_toStartOf="@+id/v_route_info"
+            app:layout_constraintTop_toTopOf="@+id/v_route_info"
+            app:srcCompat="@drawable/ic_pin2" />
+
+        <TextView
+            android:id="@+id/tv_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="@string/lbl_route"
+            android:textSize="@dimen/textSizeSmall2"
+            android:textColor="#404040"
+            app:layout_constraintBottom_toBottomOf="@+id/img_route"
+            app:layout_constraintStart_toEndOf="@+id/img_route"
+            app:layout_constraintTop_toTopOf="@+id/img_route" />
+
+        <TextView
+            android:id="@+id/tv_route_points"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            tools:text="LIMA - PISCO - CHINCHA"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#404040"
+            app:layout_constraintStart_toStartOf="@+id/tv_route"
+            app:layout_constraintTop_toBottomOf="@+id/tv_route"
+            app:layout_constraintEnd_toEndOf="@+id/v_route_info"/>
+
+        <View
+            android:id="@+id/v_separator_1"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="@dimen/heightSeparator"
+            android:background="#dbdbdb"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintStart_toStartOf="@+id/v_route_info"
+            app:layout_constraintEnd_toEndOf="@+id/v_route_info"
+            app:layout_constraintTop_toBottomOf="@+id/tv_route_points" />
+
+        <ImageView
+            android:id="@+id/img_fleet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginMain"
+            app:layout_constraintStart_toStartOf="@+id/img_route"
+            app:layout_constraintTop_toBottomOf="@+id/v_separator_1"
+            app:srcCompat="@drawable/ic_fleet" />
+
+        <TextView
+            android:id="@+id/tv_fleet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_fleet"
+            android:textSize="@dimen/textSizeSmall2"
+            android:textColor="#404040"
+            app:layout_constraintBottom_toBottomOf="@+id/img_fleet"
+            app:layout_constraintStart_toStartOf="@id/tv_route"
+            app:layout_constraintTop_toTopOf="@+id/img_fleet" />
+
+        <TextView
+            android:id="@+id/tv_fleet_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="AMG-923"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#404040"
+            app:layout_constraintStart_toStartOf="@+id/tv_fleet"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fleet" />
+
+        <View
+            android:id="@+id/v_separator_2"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="@dimen/heightSeparator"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:background="#dbdbdb"
+            app:layout_constraintStart_toStartOf="@+id/v_route_info"
+            app:layout_constraintEnd_toEndOf="@+id/v_route_info"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fleet_id" />
+
+        <ImageView
+            android:id="@+id/img_fuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginMain"
+            app:layout_constraintStart_toStartOf="@+id/img_fleet"
+            app:layout_constraintTop_toBottomOf="@+id/v_separator_2"
+            app:srcCompat="@drawable/ic_fuel" />
+
+        <TextView
+            android:id="@+id/tv_fuel_to_transport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_fuel_to_transport"
+            android:textSize="@dimen/textSizeSmall2"
+            android:textColor="#404040"
+            app:layout_constraintBottom_toBottomOf="@+id/img_fuel"
+            app:layout_constraintStart_toStartOf="@id/tv_fleet"
+            app:layout_constraintTop_toTopOf="@+id/img_fuel" />
+
+        <TextView
+            android:id="@+id/tv_fuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="GNV"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#404040"
+            app:layout_constraintStart_toStartOf="@+id/tv_fuel_to_transport"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fuel_to_transport"/>
+
+        <!--Button
+            android:id="@+id/btn_start_route"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="@string/lbl_start_route"
+            style="@style/AppTheme.Button"
+            android:background="@drawable/general_selector"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:paddingEnd="@dimen/marginMain"
+            android:paddingStart="@dimen/marginMain"
+            tools:enabled="true"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/v_route_info"
+            app:layout_constraintStart_toStartOf="@+id/v_route_info"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fuel" /-->
+
+        <FrameLayout
+            android:id="@+id/btn_start_route"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            style="@style/AppTheme.Button"
+            android:background="@drawable/general_selector"
+            android:paddingEnd="@dimen/marginMain"
+            android:paddingStart="@dimen/marginMain"
+            tools:enabled="true"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/v_route_info"
+            app:layout_constraintStart_toStartOf="@+id/v_route_info"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fuel" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/textSizeMain2"
+                android:text="@string/lbl_start_route"
+                android:textColor="@android:color/white"
+                android:drawablePadding="20dp"
+                android:drawableEnd="@drawable/ic_right_arrow"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_view_deposits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/margingTopMainTitle"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:text="@string/lbl_view_deposits"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSizeMain"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_start_route" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progressBarSize"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/view_no_route_assigned"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        layout="@layout/fragment_no_route" />
+
+</FrameLayout>

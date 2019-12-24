@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorInfoBackground">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginStart="@dimen/marginMain"
+        android:layout_marginEnd="@dimen/marginMain"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_login_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margingTopMainTitle"
+                android:text="@string/lbl_login"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSizeLarge3"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/progressBarSize"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_login_title" />
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="@dimen/widthConstrained"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginMain"
+                android:layout_marginEnd="@dimen/marginMain"
+                android:layout_marginTop="60dp"
+                android:inputType="textEmailAddress"
+                android:hint="@string/lbl_username"
+                android:drawableStart="@drawable/ic_user"
+                style="@style/AppTheme.EditText"
+                android:maxLength="100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_login_title" />
+
+            <EditText
+                android:id="@+id/edt_user_doc_number"
+                android:layout_width="@dimen/widthConstrained"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="@string/lbl_dni"
+                android:inputType="number"
+                android:drawableStart="@drawable/ic_card"
+                style="@style/AppTheme.EditText"
+                android:maxLength="8"
+                app:layout_constraintEnd_toEndOf="@+id/edt_username"
+                app:layout_constraintStart_toStartOf="@+id/edt_username"
+                app:layout_constraintTop_toBottomOf="@+id/edt_username" />
+
+            <CheckBox
+                android:id="@+id/cb_legal_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@style/AppTheme.Checkbox"
+                app:layout_constraintStart_toStartOf="@+id/edt_user_doc_number"
+                app:layout_constraintTop_toBottomOf="@+id/edt_user_doc_number" />
+
+            <TextView
+                android:id="@+id/tv_legal_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_legal_terms"
+                android:textSize="@dimen/textSizeSmall3"
+                app:layout_constraintStart_toEndOf="@+id/cb_legal_terms"
+                app:layout_constraintTop_toTopOf="@+id/cb_legal_terms"
+                app:layout_constraintBottom_toBottomOf="@+id/cb_legal_terms"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="@dimen/widthConstrained"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginMain"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="@dimen/marginMain"
+                android:layout_marginBottom="@dimen/marginMain"
+                style="@style/AppTheme.Button"
+                android:background="@drawable/general_selector"
+                android:text="@string/lbl_enter"
+                android:textSize="@dimen/textSizeMain"
+                android:enabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_legal_terms"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_forgotten_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:text="¿Olvidaste tu contraseña?"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_fuel_background" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_vehicle_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

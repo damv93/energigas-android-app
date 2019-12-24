@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "949960971151",
+    "firebase_url": "https://energigas-3ea5d.firebaseio.com",
+    "project_id": "energigas-3ea5d",
+    "storage_bucket": "energigas-3ea5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949960971151:android:d8638d5281c3a412",
+        "android_client_info": {
+          "package_name": "pe.focusit.energigas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949960971151-qcenf0ealui9pnalhu1sn5vpq5geur32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz0X0LmR5muAVIt1cGiro-AXPbHmx70h0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

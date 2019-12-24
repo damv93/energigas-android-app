@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="margingTopMainTitle">30dp</dimen>
+    <dimen name="widthConstrained">0dp</dimen>
+    <dimen name="heightConstrained">0dp</dimen>
+    <dimen name="marginMain">15dp</dimen>
+    <dimen name="textSizeVerySmall">8sp</dimen>
+    <dimen name="textSizeSmall">10sp</dimen>
+    <dimen name="textSizeSmall2">11sp</dimen>
+    <dimen name="textSizeSmall3">12sp</dimen>
+    <dimen name="textSizeMain">14sp</dimen>
+    <dimen name="textSizeMain2">15sp</dimen>
+    <dimen name="textSizeMain3">16sp</dimen>
+    <dimen name="textSizeLarge">17sp</dimen>
+    <dimen name="textSizeLarge2">18sp</dimen>
+    <dimen name="textSizeLarge3">22sp</dimen>
+    <dimen name="heightSeparator">1dp</dimen>
+    <dimen name="progressBarSize">30dp</dimen>
+
+    <!-- Override bottom navigation view values -->
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">48dp</dimen>
+</resources>

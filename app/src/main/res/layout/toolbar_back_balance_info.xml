@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="@dimen/widthConstrained"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/ic_toolbar_background">
+
+        <ImageView
+            android:id="@+id/img_back_arrow"
+            android:layout_width="17dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center_vertical"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_action_bar_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"
+            tools:text="Lima - Pisco"
+            android:textSize="@dimen/textSizeLarge"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/widthConstrained"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_budget_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:textSize="@dimen/textSizeVerySmall"
+            android:textColor="#7b7b7b"
+            android:text="@string/lbl_balance" />
+
+        <TextView
+            android:id="@+id/tv_budget_balance_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#4d4d4d"
+            tools:text="S/1,750.00" />
+
+    </LinearLayout>
+
+</LinearLayout>

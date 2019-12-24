@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_expense_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="11dp"
+    android:layout_marginStart="@dimen/marginMain"
+    android:layout_marginEnd="@dimen/marginMain"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_toll" />
+
+        <TextView
+            android:id="@+id/tv_expense_item_name"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="29dp"
+            android:textColor="#3b3b3b"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_expense_item_amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Peaje" />
+
+        <TextView
+            android:id="@+id/tv_expense_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="22/8/18"
+            android:textSize="@dimen/textSizeSmall"
+            android:textColor="#7b7b7b"
+            app:layout_constraintStart_toStartOf="@+id/tv_expense_item_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_expense_item_name" />
+
+        <TextView
+            android:id="@+id/tv_expense_item_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="11dp"
+            tools:text="PEN -10.00"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#3b3b3b"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_expense_item_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_expense_item_amount"
+            app:srcCompat="@drawable/ic_trash" />
+
+        <ImageView
+            android:id="@+id/img_expense_item_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="14dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tv_expense_item_amount"
+            app:layout_constraintEnd_toStartOf="@+id/img_expense_item_remove"
+            app:srcCompat="@drawable/ic_pencil" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

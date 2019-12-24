@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/marginMain"
+        tools:context=".view.fragment.MyProfileFragment">
+
+        <TextView
+            android:id="@+id/tv_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="113dp"
+            android:text="@string/lbl_driver"
+            android:textColor="#464646"
+            android:textSize="@dimen/textSizeMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            tools:text="Luis Alberto Mango Salazar"
+            android:textColor="#848484"
+            android:textSize="@dimen/textSizeMain"
+            app:layout_constraintStart_toEndOf="@+id/tv_driver"
+            app:layout_constraintTop_toTopOf="@+id/tv_driver" />
+
+        <View
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:background="#c8c8c8"
+            android:alpha="0.19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_driver" />
+
+        <TextView
+            android:id="@+id/tv_dni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/lbl_dni"
+            android:textColor="#464646"
+            android:textSize="@dimen/textSizeMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_driver" />
+
+        <TextView
+            android:id="@+id/tv_doc_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="46833158"
+            android:textColor="#848484"
+            android:textSize="@dimen/textSizeMain"
+            app:layout_constraintStart_toStartOf="@+id/tv_driver_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_dni" />
+
+        <View
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:background="#c8c8c8"
+            android:alpha="0.19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_dni" />
+
+        <TextView
+            android:id="@+id/tv_plate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/lbl_vehicle"
+            android:textColor="#464646"
+            android:textSize="@dimen/textSizeMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dni" />
+
+        <TextView
+            android:id="@+id/tv_plate_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="AVG-0025"
+            android:textColor="#848484"
+            android:textSize="@dimen/textSizeMain"
+            app:layout_constraintStart_toStartOf="@+id/tv_doc_number"
+            app:layout_constraintTop_toTopOf="@+id/tv_plate" />
+
+        <View
+            android:id="@+id/v_separator_3"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:background="#c8c8c8"
+            android:alpha="0.19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_plate" />
+
+        <TextView
+            android:id="@+id/tv_balance_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:text="@string/lbl_balance_record"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSizeSmall3"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_plate" />
+
+        <TextView
+            android:id="@+id/tv_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="@string/lbl_available"
+            android:textColor="#464646"
+            android:textSize="@dimen/textSizeMain"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/imageView2"
+            app:layout_constraintEnd_toEndOf="@id/imageView2"
+            app:layout_constraintTop_toBottomOf="@id/tv_balance_record" />
+
+        <TextView
+            android:id="@+id/tv_pending_debt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="@string/lbl_pending_debt"
+            android:textColor="#464646"
+            android:textSize="@dimen/textSizeMain"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_balance_record"
+            app:layout_constraintStart_toStartOf="@id/imageView3"
+            app:layout_constraintEnd_toEndOf="@id/imageView3"/>
+
+        <TextView
+            android:id="@+id/tv_available_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="S/ 500.00"
+            android:textColor="#4d4d4d"
+            android:textSize="@dimen/textSizeMain2"
+            app:layout_constraintEnd_toEndOf="@id/tv_available"
+            app:layout_constraintStart_toStartOf="@id/tv_available"
+            app:layout_constraintTop_toBottomOf="@id/tv_available" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="S/ 200.00"
+            android:textColor="#dc5b5b"
+            android:textSize="@dimen/textSizeMain2"
+            app:layout_constraintEnd_toEndOf="@id/tv_pending_debt"
+            app:layout_constraintStart_toStartOf="@id/tv_pending_debt"
+            app:layout_constraintTop_toBottomOf="@id/tv_pending_debt" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_logout"
+            android:textColor="@color/colorPrimaryLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_available_value" />
+
+        <TextView
+            android:id="@+id/tv_db_backup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="BD backup"
+            android:textColor="@color/colorPrimaryLight"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_logout" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_my_profile" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_available"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_wallet" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pending_debt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:srcCompat="@drawable/ic_debt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

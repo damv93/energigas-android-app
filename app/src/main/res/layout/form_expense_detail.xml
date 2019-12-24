@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_expense_detail_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/tv_expense_type_selected"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:text="@string/lbl_select_expense_type"
+            android:textSize="@dimen/textSizeMain3"
+            android:textColor="#363636"
+            android:drawableEnd="@drawable/ic_down_arrow"
+            android:drawablePadding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_expense_types"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_expense_type_selected"
+            app:layout_constraintStart_toStartOf="@+id/tv_expense_type_selected"
+            app:layout_constraintTop_toBottomOf="@+id/tv_expense_type_selected"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_expense_types"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_expense_sub_type_selected"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:text="@string/lbl_select_expense_sub_type"
+            android:textSize="@dimen/textSizeMain3"
+            android:textColor="#363636"
+            android:drawableEnd="@drawable/ic_down_arrow"
+            android:drawablePadding="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_expense_type_selected" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_expense_sub_types"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_expense_type_selected"
+            app:layout_constraintStart_toStartOf="@+id/tv_expense_type_selected"
+            app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+            <LinearLayout
+                android:id="@+id/ll_expense_sub_types"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tv_expense_type_selected, tv_expense_sub_type_selected"/>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="0.1dp"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:background="#dbdbdb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier1"/>
+
+        <TextView
+            android:id="@+id/tv_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lbl_date"
+            android:textSize="@dimen/textSizeSmall3"
+            android:textColor="#4c4c4c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/tv_expense_item_date_value"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="19dp"
+            android:textSize="@dimen/textSizeSmall3"
+            android:textColor="#7b7b7b"
+            tools:text="2 de septiembre de 2018 8:30 am"
+            app:layout_constraintStart_toEndOf="@+id/tv_date_label"
+            app:layout_constraintEnd_toStartOf="@+id/img_date"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <ImageView
+            android:id="@+id/img_date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/heightConstrained"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_right_arrow2"
+            android:tint="#919191"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="0.1dp"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:background="#dbdbdb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date_label"/>
+
+        <RadioGroup
+            android:id="@+id/rdg_fuel_provider"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+            <RadioButton
+                android:id="@+id/rb_energigas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:textColor="#4d4d4d"
+                android:text="ENERGIGAS"/>
+
+            <RadioButton
+                android:id="@+id/rb_external"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:textColor="#4d4d4d"
+                android:text="EXTERNO"/>
+
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="divider2, rdg_fuel_provider"/>
+
+        <TextView
+            android:id="@+id/tv_observation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_observation"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_observation"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_observation" >
+
+            <EditText
+                android:id="@+id/edt_observation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:maxLength="100"
+                android:digits="@string/alpha_numeric_allowed_chars"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_ruc_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_ruc_number"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_observation" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_ruc_number"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ruc_number">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_ruc_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:inputType="number"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:maxLength="200"
+                android:imeOptions="actionNext"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_voucher_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_voucher_type"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_ruc_number" />
+
+        <RadioGroup
+            android:id="@+id/rdg_voucher_type"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginTop="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_voucher_type">
+
+            <RadioButton
+                android:id="@+id/rb_invoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:textColor="#4d4d4d"
+                android:text="@string/lbl_invoice"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rb_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="53dp"
+                android:textColor="#4d4d4d"
+                android:text="@string/lbl_bill"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_voucher_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_voucher_number"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rdg_voucher_type" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_voucher_number"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_voucher_number" >
+        
+            <EditText
+                android:id="@+id/edt_voucher_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:inputType="text"
+                android:digits="@string/alpha_numeric_allowed_chars"
+                android:singleLine="true"
+                android:maxLength="20" />
+        
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/lbl_amount"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/ic_money"
+            android:drawablePadding="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_voucher_number" />
+
+        <TextView
+            android:id="@+id/tv_currency_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="22dp"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#6e6e6e"
+            android:text="S/"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/til_amount" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_amount"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/marginMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_currency_symbol"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount">
+            
+            <EditText
+                android:id="@+id/edt_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/textSizeLarge"
+                android:textColor="#3c3c3c"
+                android:maxLines="1"
+                android:maxLength="7" />
+        
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_gas_station"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:text="Selecciona el grifo"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableStart="@drawable/bullet_point"
+            android:drawableEnd="@drawable/ic_down_arrow"
+            android:drawablePadding="9dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_amount" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_gas_stations"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_gas_station"
+            app:layout_constraintStart_toStartOf="@+id/tv_gas_station"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gas_station"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_gas_stations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_gallons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/lbl_gallons"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gas_station" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_gallons"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gallons">
+
+            <EditText
+                android:id="@+id/edt_gallons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:maxLength="7" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_mileage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="@dimen/marginMain"
+            android:text="@string/lbl_mileage"
+            android:textColor="#424242"
+            android:textSize="@dimen/textSizeMain2"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_gallons" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_mileage"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginMain"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginTop="7dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mileage">
+
+            <EditText
+                android:id="@+id/edt_mileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.EditText2"
+                android:textSize="@dimen/textSizeMain2"
+                android:textColor="#3c3c3c"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="8" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="til_amount, tv_gas_station, til_gallons, til_mileage"/>
+
+        <TextView
+            android:id="@+id/tv_attach_photo"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="91dp"
+            android:drawableLeft="@drawable/bullet_point"
+            android:drawablePadding="9dp"
+            android:textSize="@dimen/textSizeSmall2"
+            android:textColor="#515151"
+            android:text="@string/txt_attach_voucher_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier3" />
+
+        <ImageView
+            android:id="@+id/img_attach_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier3" />
+
+        <Button
+            android:id="@+id/btn_save_expense"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="12dp"
+            style="@style/AppTheme.Button"
+            android:background="@drawable/general_selector"
+            android:text="@string/lbl_add_expense_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_attach_photo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

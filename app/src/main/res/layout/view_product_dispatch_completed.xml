@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/marginMain">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_product_dispatch_completed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_dispatch_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_dispatch2" />
+
+            <TextView
+                android:id="@+id/tv_dispatch_completed_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="29dp"
+                tools:text="Lima"
+                android:textSize="@dimen/textSizeLarge2"
+                android:textColor="#363636"
+                app:layout_constraintStart_toEndOf="@+id/img_dispatch_completed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_dispatch_completed_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                tools:text="09/09/18"
+                android:textSize="@dimen/textSizeSmall"
+                android:textColor="#7b7b7b"
+                app:layout_constraintStart_toStartOf="@+id/tv_dispatch_completed_place"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dispatch_completed_place" />
+
+            <ImageView
+                android:id="@+id/img_dispatch_completed_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/ic_trash" />
+
+            <ImageView
+                android:id="@+id/img_dispatch_completed_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/img_dispatch_completed_remove"
+                app:layout_constraintEnd_toStartOf="@+id/img_dispatch_completed_remove"
+                app:srcCompat="@drawable/ic_pencil" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_user_congrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="27dp"
+        android:lineHeight="21sp"
+        android:textSize="@dimen/textSizeLarge"
+        android:textColor="#3b3b3b"
+        android:textStyle="bold"
+        tools:text="@string/txt_user_congrats"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="45dp"
+        android:paddingEnd="45dp"
+        android:gravity="center"
+        android:lineHeight="21sp"
+        android:textSize="@dimen/textSizeMain2"
+        android:textColor="#3b3b3b"
+        android:text="@string/txt_dispatch_completed"/>
+
+    <Button
+        android:id="@+id/btn_close_declaration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginMain"
+        style="@style/AppTheme.Button"
+        android:background="@drawable/general_selector"
+        android:text="@string/lbl_close_declaration"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

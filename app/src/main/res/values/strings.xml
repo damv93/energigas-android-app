@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">Energigas</string>
+
+    <!-- General strings -->
+    <string name="lbl_error">Error</string>
+    <string name="lbl_accept">Aceptar</string>
+    <string name="lbl_cancel">Cancelar</string>
+    <string name="lbl_my_route">Mi ruta</string>
+    <string name="error_msg_service_data">Hubo un error al recibir los datos.</string>
+    <string name="error_msg_local_data">No se encontraron datos.</string>
+    <string name="format_full_date_time">d \'de\' MMMM \'de\' yyyy h:mm a</string>
+    <string name="format_short_date">dd/MM/yy</string>
+    <string name="msg_connect_to_internet">Conéctate a internet</string>
+    <string name="msg_check_connection">No estás conectado. Comprueba la conexión.</string>
+    <string name="lbl_retry">REINTENTAR</string>
+    <string name="msg_confirm_close_form">¿Estás seguro que deseas cerrar el formulario?</string>
+    <string name="alpha_numeric_allowed_chars">"abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚ1234567890-. "</string>
+    <string name="name_allowed_chars">"abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚ "</string>
+    <string name="lbl_observation">Observación</string>
+    <string name="lbl_close">Cerrar</string>
+
+    <!-- Rest Api -->
+    <string name="error_mg_internet_connection">No se cuenta con conexión a Internet.</string>
+    <string name="error_msg_rest_failure">Ocurrió un error al comunicarse con el servidor.</string>
+
+    <!-- Log in -->
+    <string name="lbl_login">Iniciar sesión</string>
+    <string name="lbl_email">EMAIL</string>
+    <string name="lbl_username">USUARIO</string>
+    <string name="lbl_dni">DNI</string>
+    <string name="txt_legal_terms">Acepto los <a href="#">términos y condiciones</a></string>
+    <string name="lbl_enter">INGRESAR</string>
+    <string name="msg_accept_legal_terms">Debe aceptar los términos y condiciones</string>
+
+    <!-- Bottom navigation -->
+    <string name="lbl_declarations">Rendiciones</string>
+    <string name="lbl_my_profile">Mi perfil</string>
+
+    <!-- My Route -->
+    <string name="lbl_route">RUTA</string>
+    <string name="lbl_fleet">FLOTA</string>
+    <string name="lbl_fuel_to_transport">COMBUSTIBLE A TRASLADAR</string>
+    <string name="lbl_value_scoop">Scoop: %1$d</string>
+    <string name="lbl_value_volume">Volumen: %1$d</string>
+    <string name="lbl_start_route">COMENZAR RUTA</string>
+    <string name="error_msg_route_not_found">No se encontró ninguna ruta.</string>
+    <string name="msg_driver_not_have_vehicle">No posee una unidad asignada.</string>
+    <string name="txt_user_greeting">Hola %1$s</string>
+    <string name="txt_no_route_assigned">Actualmente no tienes ninguna ruta asignada</string>
+    <string name="lbl_view_deposits"><u>Ver depósitos</u></string>
+
+    <!-- Route Detail -->
+    <string name="txt_declare_expenses_product_dispatch"><b>%1$s</b>, rinde aquí tus cuentas y el despacho de producto durante los viajes que realizas</string>
+    <string name="lbl_progress">Progreso</string>
+    <string name="lbl_expense_amount">Monto de gasto</string>
+    <string name="lbl_progress_percentage">%1$d%%</string>
+    <string name="lbl_expense_amount_number">S/%1$.2f</string>
+    <string name="lbl_send_for_revision">ENVIAR PARA REVISIÓN</string>
+    <string name="lbl_send_declaration_congrats">¡Muy bien %1$s!</string>
+    <string name="txt_send_declaration_success">Enviaste satisfactoriamente tu rendición de cuentas y despacho de tu ruta asignada</string>
+    <string name="txt_send_declaration_confirm">¿Tienes completa toda tus rendiciones de cuentas y despacho?</string>
+    <string name="txt_all_routes_completed"><b>Genial %1$s,</b> todas tus rutas están completas</string>
+
+    <!-- Route Segment Detail -->
+    <string name="lbl_expense_detail">Detalle de gasto</string>
+    <string name="lbl_product_dispatch">Despacho de producto</string>
+
+    <!-- Expense Detail -->
+    <string name="txt_expense_detail_indications">Aquí puedes agregar los gastos que tienes en el trayecto de tu ruta</string>
+    <string name="lbl_date">Fecha</string>
+    <string name="lbl_ruc_number">Número de RUC</string>
+    <string name="lbl_voucher_type">Tipo de comprobante</string>
+    <string name="lbl_invoice">Factura</string>
+    <string name="lbl_bill">Boleta</string>
+    <string name="lbl_ticket">Ticket</string>
+    <string name="lbl_voucher_number">Número de comprobante</string>
+    <string name="lbl_ticket_number">Número de ticket</string>
+    <string name="lbl_amount">Monto</string>
+    <string name="txt_attach_voucher_photo">Si deseas puedes adjuntar una foto de la guía</string>
+    <string name="lbl_add_expense_detail">AGREGAR DETALLE DE GASTO</string>
+    <string name="lbl_select_expense_type">Selecciona el tipo de gasto</string>
+    <string name="lbl_select_expense_sub_type">Selecciona el sub-tipo</string>
+    <string name="lbl_expense_total">TOTAL GASTO:</string>
+    <string name="lbl_expense_amount_pen">S/ -%1$.2f</string>
+    <string name="msg_confirm_delete_expense">¿Estás seguro que deseas eliminar el gasto?</string>
+    <string name="txt_segment_expense">*Este gasto solo pertenece al tramo: %1$s</string>
+    <string name="msg_expense_saved_success">Se guardó el gasto exitosamente</string>
+    <string name="msg_expense_removed_success">Se eliminó el gasto exitosamente</string>
+    <string name="lbl_select_gas_station">Selecciona el grifo</string>
+    <string name="lbl_gallons">Galones</string>
+    <string name="lbl_mileage">Kilometraje</string>
+
+    <!-- Product Dispatch -->
+    <string name="txt_product_dispatch_indications">Aquí puedes agregar el porcentaje de llenado del tanque al despachar</string>
+    <string name="lbl_arrival">Llegada</string>
+    <string name="lbl_departure">Salida</string>
+    <string name="lbl_client">Cliente</string>
+    <string name="lbl_requested_amount">Cant. solicitada</string>
+    <string name="lbl_tank_percentage">% Tanque</string>
+    <string name="lbl_init_hit_amount">Cant. Golpe inicial</string>
+    <string name="lbl_final_hit_amount">Cant. Golpe final</string>
+    <string name="lbl_dispatched_amount">Cant. Atendida</string>
+    <string name="lbl_hit">Golpe</string>
+    <string name="lbl_guide_number">Número de guía</string>
+    <string name="lbl_invoice_number">Número de factura</string>
+    <string name="lbl_received_by">Recepcionado por</string>
+    <string name="lbl_add_product_dispatch">AGREGAR DESPACHO DE PRODUCTO</string>
+    <string name="txt_user_congrats">Muy bien, %1$s,</string>
+    <string name="txt_dispatch_completed">Completaste el despacho de tu primera ruta</string>
+    <string name="lbl_close_declaration">CERRAR RENDICIÓN DE CUENTA</string>
+    <string name="msg_confirm_delete_dispatch">¿Estás seguro que deseas eliminar el despacho del producto?</string>
+    <string name="msg_confirm_close_dispatch">¿Estás seguro que deseas cerrar la rendición de cuenta para este tramo? No podrás modificarla.</string>
+    <string name="msg_no_expenses_registered">Debe registrar al menos un gasto.</string>
+    <string name="msg_dispatch_saved_success">Se guardó el despacho exitosamente</string>
+    <string name="msg_dispatch_removed_success">Se eliminó el despacho exitosamente</string>
+    <string name="msg_no_expenses">No se ha registrado ningún gasto, ¿desea continuar?</string>
+
+    <!-- Declarations -->
+    <string name="lbl_approved_declarations">RENDICIONES APROBADAS</string>
+    <string name="lbl_pending_declarations">RENDICIONES PENDIENTES</string>
+    <string name="lbl_observed_declarations">RENDICIONES OBSERVADAS</string>
+    <string name="lbl_approved_status">Aprobadas</string>
+    <string name="lbl_pending_status">Pendientes</string>
+    <string name="lbl_observed_status">Observadas</string>
+    <string name="lbl_unknown_status">Desconocido</string>
+    <string name="lbl_declaration_observation">Observación de la Rendición</string>
+
+    <!-- My profile -->
+    <string name="lbl_driver">Conductor</string>
+    <string name="lbl_vehicle">Unidad</string>
+    <string name="lbl_balance_record">REGISTRO DE SALDO</string>
+    <string name="lbl_available">Disponible</string>
+    <string name="lbl_pending_debt">Deuda pendiente</string>
+    <string name="lbl_profile">Perfil</string>
+    <string name="lbl_logout">Cerrar sesión</string>
+
+    <!-- Deposits -->
+    <string name="lbl_deposits">Depósitos</string>
+
+    <!-- Toolbar -->
+    <string name="lbl_amount_received">Monto entregado:</string>
+    <string name="lbl_balance">Monto entregado:</string>
+
+</resources>

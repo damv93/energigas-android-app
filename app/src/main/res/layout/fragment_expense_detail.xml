@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.fragment.ExpenseDetailFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <LinearLayout
+        android:id="@+id/ll_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_indications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginMain"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:gravity="center"
+            android:textSize="@dimen/textSizeMain2"
+            android:textColor="#5f5f5f"
+            android:lineHeight="20sp"
+            android:text="@string/txt_expense_detail_indications"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_expenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_expense_detail_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/marginMain"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp">
+
+        <Button
+            android:id="@+id/btn_close_expense_form"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-7dp"
+            android:layout_marginEnd="-7dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_close_btn" />
+
+        <include
+            android:id="@+id/sv_expense_detail_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/form_expense_detail" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

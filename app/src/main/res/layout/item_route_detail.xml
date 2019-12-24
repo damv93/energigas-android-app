@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/marginMain"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="@dimen/marginMain"
+    android:layout_marginBottom="3dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/route_detail_background">
+
+        <TextView
+            android:id="@+id/tv_segment_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/helvetica_neue_thin"
+            tools:text="01"
+            android:textSize="@dimen/textSizeSmall"
+            android:textColor="#9a9a9a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_pin" />
+
+        <TextView
+            android:id="@+id/tv_route_segment"
+            android:layout_width="@dimen/widthConstrained"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="#3b3b3b"
+            android:textSize="@dimen/textSizeMain3"
+            app:layout_constraintBottom_toBottomOf="@+id/img_pin"
+            app:layout_constraintEnd_toStartOf="@+id/tv_progress_percentage"
+            app:layout_constraintStart_toEndOf="@+id/img_pin"
+            app:layout_constraintTop_toTopOf="@+id/img_pin"
+            tools:text="Lima - Pisco" />
+
+        <TextView
+            android:id="@+id/tv_progress_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSizeMain2"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_route_segment"
+            app:layout_constraintStart_toStartOf="@id/tv_progress"
+            app:layout_constraintTop_toTopOf="@+id/tv_route_segment"
+            tools:text="100%" />
+
+        <ImageView
+            android:id="@+id/img_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/marginMain"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_right_arrow2" />
+
+        <TextView
+            android:id="@+id/tv_expense_amount_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:textSize="@dimen/textSizeMain2"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_progress_percentage"
+            app:layout_constraintStart_toStartOf="@id/tv_expense_amount"
+            app:layout_constraintTop_toTopOf="@+id/tv_progress_percentage"
+            tools:text="S/1,000.00" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/lbl_progress"
+            android:textColor="#7b7b7b"
+            android:textSize="@dimen/textSizeVerySmall"
+            app:layout_constraintEnd_toStartOf="@+id/tv_expense_amount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_expense_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/lbl_expense_amount"
+            android:textColor="#7b7b7b"
+            android:textSize="@dimen/textSizeVerySmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_enter"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_progress"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
